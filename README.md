@@ -20,6 +20,18 @@ PowerShell から開く場合:
 Start-Process .\index.html
 ```
 
+## GitHub Pages
+
+GitHub Actions で静的ファイルを GitHub Pages へ公開する設定を追加しています。
+
+公開URL:
+
+```text
+https://pakpadev.github.io/PortfolioWebsite/
+```
+
+初回のみ GitHub の `Settings > Pages` で `Source` を `GitHub Actions` に設定してください。その後は `master` へ push されるたびに自動デプロイされます。
+
 ## カスタマイズ箇所
 
 - 連絡先リンク: `index.html` の `#contact` 内の `href="#"` と `mailto:your@email.com`

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Pakpa Portfolio</title>
+  <desc id="desc">Cyber themed portfolio cover image for Pakpa.</desc>
+  <rect width="1200" height="630" fill="#030712"/>
+  <g opacity=".22" stroke="#0f2a3f" stroke-width="1">
+    <path d="M0 90h1200M0 180h1200M0 270h1200M0 360h1200M0 450h1200M0 540h1200"/>
+    <path d="M120 0v630M240 0v630M360 0v630M480 0v630M600 0v630M720 0v630M840 0v630M960 0v630M1080 0v630"/>
+  </g>
+  <circle cx="600" cy="315" r="220" fill="none" stroke="#00f5ff" stroke-width="2" opacity=".45"/>
+  <circle cx="600" cy="315" r="150" fill="none" stroke="#7b2fff" stroke-width="2" opacity=".42"/>
+  <text x="600" y="300" text-anchor="middle" fill="#ffffff" font-family="Orbitron, monospace" font-size="112" font-weight="900">PAKPA</text>
+  <text x="600" y="380" text-anchor="middle" fill="#00ff9f" font-family="JetBrains Mono, monospace" font-size="34">AI &amp; Blockchain Engineer</text>
+</svg>

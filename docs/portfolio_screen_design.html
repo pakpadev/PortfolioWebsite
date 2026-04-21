@@ -1,0 +1,549 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans); }
+
+  .screen-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .device-frame {
+    border: 1.5px solid var(--color-border-primary);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--color-background-secondary);
+  }
+
+  .section-block {
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    padding: 7px 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    cursor: pointer;
+    transition: background 0.15s;
+    position: relative;
+  }
+  .section-block:last-child { border-bottom: none; }
+  .section-block:hover { background: var(--color-background-tertiary); }
+
+  .section-tag {
+    font-size: 9px;
+    font-weight: 500;
+    padding: 2px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .tag-hero     { background: var(--color-background-info);    color: var(--color-text-info); }
+  .tag-about    { background: var(--color-background-success);  color: var(--color-text-success); }
+  .tag-skills   { background: var(--color-background-warning);  color: var(--color-text-warning); }
+  .tag-projects { background: rgba(83,74,183,0.12);  color: #534AB7; }
+  .tag-exp      { background: var(--color-background-danger);   color: var(--color-text-danger); }
+  .tag-contact  { background: var(--color-background-secondary); color: var(--color-text-secondary); border: 0.5px solid var(--color-border-secondary); }
+
+  .section-info { flex: 1; min-width: 0; }
+  .section-name { font-size: 12px; font-weight: 500; color: var(--color-text-primary); }
+  .section-desc { font-size: 10px; color: var(--color-text-secondary); margin-top: 1px; line-height: 1.4; }
+
+  .section-height-bar {
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+  }
+  .height-indicator {
+    height: 100%;
+    width: 3px;
+    border-radius: 2px;
+    min-height: 6px;
+  }
+
+  .wireframe-note {
+    font-size: 10px;
+    color: var(--color-text-tertiary);
+    font-style: italic;
+    padding: 4px 10px 6px;
+    border-top: 0.5px solid var(--color-border-tertiary);
+  }
+
+  .content-area {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .detail-panel {
+    background: var(--color-background-primary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+  }
+  .detail-header {
+    padding: 10px 14px;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .detail-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .detail-content { padding: 10px 14px; }
+
+  .element-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 5px 0;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+  .element-row:last-child { border-bottom: none; }
+  .el-type {
+    font-size: 9px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    background: var(--color-background-secondary);
+    color: var(--color-text-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 1px;
+    font-family: var(--font-mono);
+  }
+  .el-desc {
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+  .el-note {
+    font-size: 10px;
+    color: var(--color-text-tertiary);
+    margin-top: 1px;
+  }
+
+  .effect-badge {
+    display: inline-block;
+    font-size: 9px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    background: var(--color-background-tertiary);
+    color: var(--color-text-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    margin: 1px 2px 1px 0;
+    font-family: var(--font-mono);
+  }
+
+  .layout-thumb {
+    background: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: 6px;
+    padding: 8px;
+    margin-top: 8px;
+  }
+  .thumb-row {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+  .thumb-row:last-child { margin-bottom: 0; }
+  .thumb-block {
+    background: var(--color-background-primary);
+    border: 0.5px solid var(--color-border-secondary);
+    border-radius: 3px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    color: var(--color-text-tertiary);
+  }
+
+  .resp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .resp-card {
+    background: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: 6px;
+    padding: 8px;
+    text-align: center;
+  }
+  .resp-icon {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  .resp-label {
+    font-size: 10px;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+  }
+  .resp-sub {
+    font-size: 9px;
+    color: var(--color-text-tertiary);
+    margin-top: 1px;
+  }
+  .resp-bar {
+    height: 36px;
+    background: var(--color-background-primary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: 4px;
+    margin-top: 6px;
+    position: relative;
+    overflow: hidden;
+  }
+  .resp-nav-full { position: absolute; top: 4px; left: 4px; right: 4px; height: 8px; background: var(--color-border-secondary); border-radius: 2px; }
+  .resp-nav-icon { position: absolute; top: 4px; right: 4px; width: 18px; height: 8px; background: var(--color-border-secondary); border-radius: 2px; }
+  .resp-nav-left { position: absolute; top: 4px; left: 4px; width: 26px; height: 8px; background: var(--color-border-secondary); border-radius: 2px; }
+  .resp-hero { position: absolute; bottom: 4px; left: 4px; right: 4px; height: 10px; background: var(--color-border-tertiary); border-radius: 2px; }
+
+  .flow-connector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 14px;
+    color: var(--color-text-tertiary);
+    font-size: 10px;
+  }
+
+  .active-section { background: var(--color-background-tertiary) !important; }
+
+  h2 { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 10px; }
+  h3 { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); margin-bottom: 6px; margin-top: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+</style>
+
+<h2 aria-hidden="true" style="font-size:14px;margin:0 0 14px">ポートフォリオサイト 画面設計</h2>
+
+<div class="content-area">
+
+  <!-- Left: LP section list (page flow) -->
+  <div>
+    <p class="screen-label">LP セクション構成 / スクロールフロー</p>
+    <div class="device-frame" id="section-list">
+
+      <!-- Fixed Header -->
+      <div class="section-block active-section" id="sec-header" onclick="showDetail('header')">
+        <div class="section-info">
+          <div class="section-name">固定ヘッダー（全セクション共通）</div>
+          <div class="section-desc">ロゴ ・ ナビリンク ・ スクロール追従 ・ モバイルハンバーガー</div>
+        </div>
+        <div class="section-tag tag-contact">Fixed</div>
+      </div>
+
+      <!-- Hero -->
+      <div class="section-block" id="sec-hero" onclick="showDetail('hero')">
+        <div class="section-info">
+          <div class="section-name">#hero — ヒーロー</div>
+          <div class="section-desc">フルスクリーン ・ 名前（グリッチ） ・ 肩書きタイピング ・ CTA × 2 ・ パーティクル背景</div>
+        </div>
+        <div class="section-tag tag-hero">100vh</div>
+      </div>
+
+      <div class="flow-connector">↓</div>
+
+      <!-- About -->
+      <div class="section-block" id="sec-about" onclick="showDetail('about')">
+        <div class="section-info">
+          <div class="section-name">#about — About</div>
+          <div class="section-desc">自己紹介文 ・ スキルバッジ ・ アバター（任意）</div>
+        </div>
+        <div class="section-tag tag-about">~60vh</div>
+      </div>
+
+      <div class="flow-connector">↓</div>
+
+      <!-- Skills -->
+      <div class="section-block" id="sec-skills" onclick="showDetail('skills')">
+        <div class="section-info">
+          <div class="section-name">#skills — Skills</div>
+          <div class="section-desc">カテゴリ別グリッドカード ・ アイコン + 名称 ・ ネオンホバー</div>
+        </div>
+        <div class="section-tag tag-skills">~70vh</div>
+      </div>
+
+      <div class="flow-connector">↓</div>
+
+      <!-- Projects -->
+      <div class="section-block" id="sec-projects" onclick="showDetail('projects')">
+        <div class="section-info">
+          <div class="section-name">#projects — Projects</div>
+          <div class="section-desc">カードグリッド（3→1列） ・ 技術バッジ ・ GitHub / Demo リンク</div>
+        </div>
+        <div class="section-tag tag-projects">~80vh</div>
+      </div>
+
+      <div class="flow-connector">↓</div>
+
+      <!-- Experience -->
+      <div class="section-block" id="sec-exp" onclick="showDetail('experience')">
+        <div class="section-info">
+          <div class="section-name">#experience — Experience</div>
+          <div class="section-desc">縦タイムライン ・ 期間 / 役割 / 概要 ・ フェードイン</div>
+        </div>
+        <div class="section-tag tag-exp">~60vh</div>
+      </div>
+
+      <div class="flow-connector">↓</div>
+
+      <!-- Contact -->
+      <div class="section-block" id="sec-contact" onclick="showDetail('contact')">
+        <div class="section-info">
+          <div class="section-name">#contact — Contact</div>
+          <div class="section-desc">SNSアイコン（ネオン発光） ・ メール ・ コピーライト</div>
+        </div>
+        <div class="section-tag tag-contact">~40vh</div>
+      </div>
+
+      <div class="wireframe-note">セクションをクリック → 詳細仕様を表示</div>
+    </div>
+
+    <!-- Responsive breakpoints -->
+    <p class="screen-label" style="margin-top:16px">レスポンシブ対応</p>
+    <div class="resp-grid">
+      <div class="resp-card">
+        <div class="resp-icon">📱</div>
+        <div class="resp-label">Mobile</div>
+        <div class="resp-sub">&lt; 768px</div>
+        <div class="resp-bar">
+          <div class="resp-nav-left"></div>
+          <div class="resp-nav-icon"></div>
+          <div class="resp-hero"></div>
+        </div>
+        <div style="font-size:9px;color:var(--color-text-tertiary);margin-top:5px;line-height:1.4">1列グリッド<br>ハンバーガーメニュー</div>
+      </div>
+      <div class="resp-card">
+        <div class="resp-icon">📟</div>
+        <div class="resp-label">Tablet</div>
+        <div class="resp-sub">768–1024px</div>
+        <div class="resp-bar">
+          <div class="resp-nav-full"></div>
+          <div class="resp-hero"></div>
+        </div>
+        <div style="font-size:9px;color:var(--color-text-tertiary);margin-top:5px;line-height:1.4">2列グリッド<br>省略ナビ</div>
+      </div>
+      <div class="resp-card">
+        <div class="resp-icon">🖥</div>
+        <div class="resp-label">Desktop</div>
+        <div class="resp-sub">&gt; 1024px</div>
+        <div class="resp-bar">
+          <div class="resp-nav-full"></div>
+          <div class="resp-hero"></div>
+        </div>
+        <div style="font-size:9px;color:var(--color-text-tertiary);margin-top:5px;line-height:1.4">3列グリッド<br>フルナビ表示</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: Detail panel -->
+  <div class="detail-panel" id="detail-panel">
+    <div class="detail-header">
+      <div class="detail-dot" id="detail-dot" style="background:#185FA5"></div>
+      <span id="detail-title">固定ヘッダー</span>
+    </div>
+    <div class="detail-content" id="detail-content">
+      <!-- populated by JS -->
+    </div>
+  </div>
+
+</div>
+
+<script>
+const details = {
+  header: {
+    title: '固定ヘッダー',
+    color: '#888780',
+    elements: [
+      { type: 'Logo', desc: '名前 or イニシャル（左端）', note: 'クリックで #hero へスクロール' },
+      { type: 'NavLinks', desc: 'About / Skills / Projects / Experience / Contact', note: 'デスクトップのみ表示' },
+      { type: 'Hamburger', desc: 'モバイル用メニューアイコン', note: 'タップでドロワー展開' },
+      { type: 'Backdrop', desc: 'スクロール時 backdrop-blur + 透過背景', note: 'position: fixed / z-index: 50' },
+      { type: 'ActiveLink', desc: 'Intersection Observer でアクティブセクションをハイライト', note: '' },
+    ],
+    effects: ['backdrop-filter', 'smooth-scroll', 'intersection observer'],
+    layout: null,
+  },
+  hero: {
+    title: '#hero — ヒーロー',
+    color: '#185FA5',
+    elements: [
+      { type: 'Canvas', desc: 'パーティクル背景（浮遊する点と繋がる線）', note: 'モバイルは描画数50%削減' },
+      { type: 'Grid', desc: 'パースペクティブグリッドオーバーレイ', note: '擬似要素 or SVG' },
+      { type: 'H1', desc: '名前（グリッチエフェクト付き）', note: 'Share Tech Mono / Orbitron' },
+      { type: 'TypeWriter', desc: '肩書きタイピングアニメーション', note: '例: AI Engineer / Blockchain Dev' },
+      { type: 'CTA', desc: '「View Projects」「Contact」ボタン', note: 'ネオングロウ border' },
+      { type: 'Scroll', desc: 'スクロールダウンインジケーター', note: 'bounce アニメーション' },
+    ],
+    effects: ['glitch-text', 'typewriter', 'particle-canvas', 'neon-glow', 'scanline'],
+    layout: {
+      rows: [
+        [{ label: 'Canvas Background (100vw)', flex: 1 }],
+        [{ label: 'Name (H1 + Glitch)', flex: 1 }],
+        [{ label: 'Typewriter subtitle', flex: 1 }],
+        [{ label: 'CTA btn 1', flex: 1 }, { label: 'CTA btn 2', flex: 1 }],
+        [{ label: '↓ Scroll indicator', flex: 1 }],
+      ]
+    }
+  },
+  about: {
+    title: '#about — About',
+    color: '#0F6E56',
+    elements: [
+      { type: 'Avatar', desc: 'プロフィール画像（任意）', note: 'border: neon cyan' },
+      { type: 'Paragraph', desc: '自己紹介文 2〜3段落', note: 'JetBrains Mono / Noto Sans JP' },
+      { type: 'Badges', desc: 'キーワードバッジ #AI #Blockchain #Node.js …', note: 'ネオンカラーのpill' },
+    ],
+    effects: ['fade-in-view', 'neon-badge'],
+    layout: {
+      rows: [
+        [{ label: 'Avatar', flex: 0.4 }, { label: 'Bio text + Badges', flex: 1 }],
+      ]
+    }
+  },
+  skills: {
+    title: '#skills — Skills',
+    color: '#BA7517',
+    elements: [
+      { type: 'SectionTitle', desc: 'SKILLS — セクション見出し', note: 'Orbitron / アンダーラインneon' },
+      { type: 'CategoryTab', desc: 'AI / Blockchain / Backend / Cloud / Tools タブ', note: 'またはグリッド全表示' },
+      { type: 'SkillCard', desc: 'アイコン + スキル名カード', note: 'hover: neon box-shadow glow' },
+    ],
+    effects: ['fade-in-view', 'hover-glow', 'stagger-appear'],
+    layout: {
+      rows: [
+        [{ label: 'Section title', flex: 1 }],
+        [{ label: 'Card', flex: 1 }, { label: 'Card', flex: 1 }, { label: 'Card', flex: 1 }],
+        [{ label: 'Card', flex: 1 }, { label: 'Card', flex: 1 }, { label: 'Card', flex: 1 }],
+      ]
+    }
+  },
+  projects: {
+    title: '#projects — Projects',
+    color: '#534AB7',
+    elements: [
+      { type: 'SectionTitle', desc: 'PROJECTS — セクション見出し', note: '' },
+      { type: 'ProjectCard', desc: 'プロジェクト名 / 説明文 / 技術バッジ', note: 'hover: scale + glow' },
+      { type: 'TechBadge', desc: '使用技術バッジ（小さいpill）', note: 'cyan / purple / green' },
+      { type: 'LinkBtn', desc: 'GitHub / Demo リンクボタン', note: 'アイコン付き' },
+    ],
+    effects: ['fade-in-view', 'card-hover-scale', 'neon-badge'],
+    layout: {
+      rows: [
+        [{ label: 'Section title', flex: 1 }],
+        [{ label: 'Project Card 1', flex: 1 }, { label: 'Project Card 2', flex: 1 }, { label: 'Project Card 3', flex: 1 }],
+        [{ label: 'Project Card 4', flex: 1 }, { label: '…', flex: 1 }, { label: '(1列/mobile)', flex: 1 }],
+      ]
+    }
+  },
+  experience: {
+    title: '#experience — Experience',
+    color: '#A32D2D',
+    elements: [
+      { type: 'SectionTitle', desc: 'EXPERIENCE — セクション見出し', note: '' },
+      { type: 'Timeline', desc: '縦タイムライン（左: 点線 ・ 右: コンテンツ）', note: 'neon dot + vertical line' },
+      { type: 'TimelineItem', desc: '期間 / 会社名 / 役割 / 概要', note: 'whileInView フェードイン' },
+      { type: 'Tag', desc: '技術タグ（経験ごと）', note: '' },
+    ],
+    effects: ['timeline-dot-glow', 'fade-in-left', 'stagger-appear'],
+    layout: {
+      rows: [
+        [{ label: 'Section title', flex: 1 }],
+        [{ label: '● dot + line', flex: 0.15 }, { label: 'Item: period / company / role / desc', flex: 1 }],
+        [{ label: '● dot + line', flex: 0.15 }, { label: 'Item: period / company / role / desc', flex: 1 }],
+      ]
+    }
+  },
+  contact: {
+    title: '#contact — Contact',
+    color: '#5F5E5A',
+    elements: [
+      { type: 'SectionTitle', desc: 'CONTACT — セクション見出し', note: '' },
+      { type: 'SocialBtn', desc: 'GitHub / X / LinkedIn / Email アイコンボタン', note: 'ネオン発光 hover' },
+      { type: 'EmailLink', desc: 'メールアドレス（コピー or mailto:）', note: '' },
+      { type: 'Copyright', desc: '© 2025 {Name}. All rights reserved.', note: 'Footerに配置' },
+    ],
+    effects: ['neon-icon-glow', 'fade-in-view'],
+    layout: {
+      rows: [
+        [{ label: 'Section title', flex: 1 }],
+        [{ label: 'GitHub', flex: 1 }, { label: 'X', flex: 1 }, { label: 'LinkedIn', flex: 1 }, { label: 'Email', flex: 1 }],
+        [{ label: '© Copyright', flex: 1 }],
+      ]
+    }
+  }
+};
+
+const tagColors = {
+  header: '#888780', hero: '#185FA5', about: '#0F6E56',
+  skills: '#BA7517', projects: '#534AB7', experience: '#A32D2D', contact: '#5F5E5A'
+};
+
+function showDetail(key) {
+  const d = details[key];
+  if (!d) return;
+
+  document.querySelectorAll('.section-block').forEach(el => el.classList.remove('active-section'));
+  const el = document.getElementById('sec-' + key);
+  if (el) el.classList.add('active-section');
+
+  document.getElementById('detail-title').textContent = d.title;
+  document.getElementById('detail-dot').style.background = d.color;
+
+  let html = '';
+
+  // Elements
+  html += '<div style="margin-bottom:10px">';
+  html += '<div style="font-size:10px;font-weight:500;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:5px">UI 要素</div>';
+  d.elements.forEach(el => {
+    html += `<div class="element-row">
+      <span class="el-type">${el.type}</span>
+      <div>
+        <div class="el-desc">${el.desc}</div>
+        ${el.note ? `<div class="el-note">${el.note}</div>` : ''}
+      </div>
+    </div>`;
+  });
+  html += '</div>';
+
+  // Effects
+  html += '<div style="margin-bottom:10px">';
+  html += '<div style="font-size:10px;font-weight:500;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:5px">エフェクト</div>';
+  html += '<div>';
+  d.effects.forEach(e => { html += `<span class="effect-badge">${e}</span>`; });
+  html += '</div></div>';
+
+  // Layout thumb
+  if (d.layout) {
+    html += '<div style="font-size:10px;font-weight:500;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:5px">レイアウト概略</div>';
+    html += '<div class="layout-thumb">';
+    d.layout.rows.forEach(row => {
+      html += '<div class="thumb-row">';
+      const total = row.reduce((s, c) => s + c.flex, 0);
+      row.forEach(cell => {
+        const pct = Math.round((cell.flex / total) * 100);
+        html += `<div class="thumb-block" style="flex:${cell.flex};min-width:0;overflow:hidden">${cell.label}</div>`;
+      });
+      html += '</div>';
+    });
+    html += '</div>';
+  }
+
+  document.getElementById('detail-content').innerHTML = html;
+}
+
+showDetail('header');
+</script>

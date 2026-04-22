@@ -1101,7 +1101,7 @@ html[lang="en"] .hero-copy {
   .site-nav {
     position: fixed;
     inset: 72px .9rem auto;
-    order: unset;
+    order: 2;
     margin-left: 0;
     display: grid;
     gap: 0;
@@ -1192,7 +1192,7 @@ html[lang="en"] .hero-copy {
   }
 
   .header-tools {
-    order: unset;
+    order: 3;
     gap: .55rem;
     margin-left: 0;
   }

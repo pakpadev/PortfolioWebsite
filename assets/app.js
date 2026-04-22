@@ -34,7 +34,7 @@ const translations = {
     about_p1:
       "AI とブロックチェーン領域を軸に、web開発、AIアプリ開発、スマートコントラクト開発に取り組んでいます。検証で終わらせず、実装して使える形にすることを大切にしています。",
     about_p2:
-      "要件整理から実装まで一貫して関わり、NFT やトークン発行を含むブロックチェーン実装と、AI を活用したアプリ設計の両方に対応しています。",
+      "要件整理から実装まで一貫して関わり、NFT やトークン発行を含むブロックチェーン実装に加えて、WordPress とそのプラグイン開発にも対応しています。",
     keywords_label: "キーワード",
     skills_title: "Skills",
     projects_title: "Projects",
@@ -60,7 +60,7 @@ const translations = {
     exp_01_company: "Web Service Company",
     exp_01_role: "Software Engineer",
     exp_01_desc:
-      "webアプリ開発、AI 機能の組み込み、プロンプトを活用した体験設計と実装を担当。",
+      "2024年から NFTマーケットプレイスの要件定義から開発保守までを担当し、ERC20トークンを活用したクーポンシステムの開発保守にも従事。2026年からは AIドキュメント自動生成システムの開発にも携わっています。",
     exp_02_company: "Freelance / Independent",
     exp_02_role: "Blockchain & Web Developer",
     exp_02_desc:
@@ -113,7 +113,7 @@ const translations = {
     about_p1:
       "My work centers on AI and blockchain, with hands-on development in web applications, AI app development, and smart contract implementation.",
     about_p2:
-      "I work from requirements through implementation, and I also handle blockchain-related builds such as NFTs and token issuance when the product calls for them.",
+      "I work from requirements through implementation, and in addition to blockchain-related builds such as NFTs and token issuance, I also handle WordPress and plugin development.",
     keywords_label: "Keywords",
     skills_title: "Skills",
     projects_title: "Projects",
@@ -139,7 +139,7 @@ const translations = {
     exp_01_company: "Web Service Company",
     exp_01_role: "Software Engineer",
     exp_01_desc:
-      "Worked on web application development, AI feature integration, and prompt-driven product experience design.",
+      "Since 2024, I have been responsible for an NFT marketplace from requirements definition through development and maintenance, while also working on development and maintenance for a coupon system powered by ERC20 tokens. Since 2026, I have also been involved in developing an AI-powered document generation system.",
     exp_02_company: "Freelance / Independent",
     exp_02_role: "Blockchain & Web Developer",
     exp_02_desc:

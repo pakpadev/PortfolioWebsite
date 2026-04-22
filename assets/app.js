@@ -61,10 +61,10 @@ const translations = {
     exp_01_role: "Software Engineer",
     exp_01_desc:
       "2024年から NFTマーケットプレイスの要件定義から開発保守までを担当し、ERC20トークンを活用したクーポンシステムの開発保守にも従事。2026年からは AIドキュメント自動生成システムの開発にも携わっています。",
-    exp_02_company: "Freelance / Independent",
-    exp_02_role: "Blockchain & Web Developer",
+    exp_02_company: "Future Vision",
+    exp_02_role: "Creator Support Product Vision",
     exp_02_desc:
-      "スマートコントラクト、NFT、トークン発行を含むブロックチェーン実装と、関連するwebアプリ開発を担当しました。",
+      "AI とブロックチェーンを裏側に隠し、クリエイターが技術の複雑さを意識せずに収益化できる仕組みを作っていきたいと考えています。今後はクリエイター支援サービス、分散型広告、ゲームや診断プロダクトを連動させながら、体験と収益の両方を設計できる事業を形にしていくことが目標です。",
     contact_title: "Contact",
     contact_copy: "AI、ブロックチェーン、web開発、AIアプリ開発、スマートコントラクト実装のご相談など、お気軽にご連絡ください。",
     contact_links: "連絡先リンク",
@@ -140,10 +140,10 @@ const translations = {
     exp_01_role: "Software Engineer",
     exp_01_desc:
       "Since 2024, I have been responsible for an NFT marketplace from requirements definition through development and maintenance, while also working on development and maintenance for a coupon system powered by ERC20 tokens. Since 2026, I have also been involved in developing an AI-powered document generation system.",
-    exp_02_company: "Freelance / Independent",
-    exp_02_role: "Blockchain & Web Developer",
+    exp_02_company: "Future Vision",
+    exp_02_role: "Creator Support Product Vision",
     exp_02_desc:
-      "Handled blockchain implementation including smart contracts, NFTs, and token issuance, along with the related web application development.",
+      "My future vision is to hide the complexity of AI and blockchain behind the product, so creators can earn without having to think about the underlying technology. I want to build a business that connects creator support services, decentralized advertising, and game or diagnostic products into one ecosystem that delivers both meaningful experiences and sustainable revenue.",
     contact_title: "Contact",
     contact_copy:
       "Feel free to reach out about AI, blockchain, web development, AI app development, or smart contract implementation.",

@@ -152,10 +152,13 @@ a {
 
 .brand-mark {
   display: inline-grid;
-  width: 3.2rem;
+  min-width: 5.2rem;
+  padding: 0 .55rem;
   height: 2rem;
   place-items: center;
   border: 1px solid rgb(0 245 255 / 45%);
+  font-size: .8rem;
+  line-height: 1;
 }
 
 .site-nav {
@@ -616,9 +619,11 @@ body.hero-animate .hero-intro:nth-child(5) { animation-delay: 700ms; }
   border: 1px solid rgb(0 245 255 / 34%);
   color: var(--accent-cyan);
   font-family: var(--font-display);
-  font-size: 3rem;
+  font-size: clamp(1.7rem, 4.4vw, 2.55rem);
   font-weight: 900;
   overflow: hidden;
+  text-align: center;
+  line-height: 1;
 }
 
 .identity-core::before {

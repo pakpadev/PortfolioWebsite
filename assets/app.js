@@ -1,9 +1,9 @@
 const translations = {
   ja: {
     html_lang: "ja",
-    page_title: "Pakpa | AI & Blockchain Engineer",
+    page_title: "Pakpa | Web, AI, and Smart Contract Developer",
     page_description:
-      "AI実装、Webサービス開発、ブロックチェーン領域を横断するエンジニア Pakpa のポートフォリオサイトです。",
+      "webアプリ開発、AIアプリ開発、スマートコントラクト開発を行う Pakpa のポートフォリオサイトです。",
     skip_link: "本文へ移動",
     brand_home: "Pakpa ホーム",
     language_switcher: "言語切り替え",
@@ -17,7 +17,7 @@ const translations = {
     nav_contact: "Contact",
     hero_system: "// INITIALIZING PORTFOLIO NODE",
     hero_copy:
-      "AI実装、Webサービス開発、ブロックチェーン技術をつなぎ、実務に届くプロダクトへ落とし込むエンジニアです。",
+      "webアプリ開発、AIアプリ開発、スマートコントラクト開発を軸に、実装まで落とし込む開発を行っています。",
     hero_cta_projects: "View Projects",
     hero_cta_contact: "Contact",
     primary_links: "主要リンク",
@@ -26,15 +26,15 @@ const translations = {
     about_title: "About",
     profile_signal: "プロフィールシグナル",
     stat_focus: "Focus",
-    stat_focus_value: "AI / Web3 / Automation",
+    stat_focus_value: "Web Apps / AI Apps / Smart Contracts",
     stat_base: "Base",
     stat_base_value: "Japan",
     stat_status: "Status",
     stat_status_value: "Open to build",
     about_p1:
-      "生成AIを活用した業務改善、Webサービスのバックエンド開発、ブロックチェーン領域の実装を中心に活動しています。技術検証で終わらせず、運用や学習、継続改善まで見据えた設計を大切にしています。",
+      "webアプリ開発、AIアプリ開発、スマートコントラクト開発を中心に取り組んでいます。検証で終わらせず、実装して使える形にすることを大切にしています。",
     about_p2:
-      "企業内エンジニアとしての開発経験に加え、個人事業として AI 導入支援、AI トレーニング、サービス設計の相談にも取り組んでいます。",
+      "要件整理から実装まで一貫して関わり、用途に合わせて web、AI、ブロックチェーンの技術を使い分けながら開発を進めています。",
     keywords_label: "キーワード",
     skills_title: "Skills",
     projects_title: "Projects",
@@ -60,29 +60,29 @@ const translations = {
     exp_01_company: "Web Service Company",
     exp_01_role: "Software Engineer",
     exp_01_desc:
-      "Web サービスのバックエンド開発、クラウドインフラ設計、AI ツールのサービス組み込み、社内 AI トレーニングの企画・推進を担当。",
+      "webアプリ開発、AI 機能の組み込み、サービス運用を見据えた実装を担当。",
     exp_02_company: "Freelance / Independent",
-    exp_02_role: "Web & Blockchain Developer",
+    exp_02_role: "Web App & Smart Contract Developer",
     exp_02_desc:
-      "Web サービス開発とブロックチェーン関連プロジェクトを担当。Solidity によるスマートコントラクト開発や NFT プロジェクト支援を経験しました。",
+      "webアプリ開発とスマートコントラクト開発を担当。Solidity による実装を中心に取り組みました。",
     contact_title: "Contact",
-    contact_copy: "AI 導入、Web サービス開発、ブロックチェーン実装の相談など、お気軽にご連絡ください。",
+    contact_copy: "webアプリ開発、AIアプリ開発、スマートコントラクト開発のご相談など、お気軽にご連絡ください。",
     contact_links: "連絡先リンク",
     email_link_label: "メールを送る",
     footer_copyright: "© 2026 Pakpa. All rights reserved.",
     footer_status: "Available for projects",
     typewriter_phrases: [
-      "AI Integration Engineer",
-      "Blockchain Developer",
-      "Web Service Developer",
-      "Automation Architect",
+      "Web App Developer",
+      "AI App Developer",
+      "Smart Contract Developer",
+      "Full-Stack Builder",
     ],
   },
   en: {
     html_lang: "en",
-    page_title: "Pakpa | AI & Blockchain Engineer",
+    page_title: "Pakpa | Web, AI, and Smart Contract Developer",
     page_description:
-      "Portfolio site for Pakpa, an engineer working across AI implementation, web services, and blockchain.",
+      "Portfolio site for Pakpa, focused on web app development, AI app development, and smart contract development.",
     skip_link: "Skip to content",
     brand_home: "Pakpa home",
     language_switcher: "Language switcher",
@@ -96,7 +96,7 @@ const translations = {
     nav_contact: "Contact",
     hero_system: "// INITIALIZING PORTFOLIO NODE",
     hero_copy:
-      "I connect AI implementation, web service development, and blockchain technology to build products that work in real business settings.",
+      "I build across web app development, AI app development, and smart contract development, with a focus on turning ideas into working implementations.",
     hero_cta_projects: "View Projects",
     hero_cta_contact: "Contact",
     primary_links: "Primary links",
@@ -105,15 +105,15 @@ const translations = {
     about_title: "About",
     profile_signal: "Profile signal",
     stat_focus: "Focus",
-    stat_focus_value: "AI / Web3 / Automation",
+    stat_focus_value: "Web Apps / AI Apps / Smart Contracts",
     stat_base: "Base",
     stat_base_value: "Japan",
     stat_status: "Status",
     stat_status_value: "Open to build",
     about_p1:
-      "My work focuses on AI-powered workflow improvement, backend development for web services, and implementation in blockchain-related domains. I care about designs that go beyond prototypes and remain useful in operation, learning, and continuous improvement.",
+      "My work focuses on web app development, AI app development, and smart contract development. I care about building things that move beyond prototypes and work in practice.",
     about_p2:
-      "Alongside my in-house engineering experience, I also support AI adoption, AI training, and service design as an independent practitioner.",
+      "I work from requirement definition through implementation, choosing the right combination of web, AI, and blockchain technologies for the product.",
     keywords_label: "Keywords",
     skills_title: "Skills",
     projects_title: "Projects",
@@ -139,23 +139,23 @@ const translations = {
     exp_01_company: "Web Service Company",
     exp_01_role: "Software Engineer",
     exp_01_desc:
-      "Worked on backend development for web services, cloud infrastructure design, integration of AI tools into services, and internal AI training programs.",
+      "Worked on web application development, AI feature integration, and implementation with ongoing service operation in mind.",
     exp_02_company: "Freelance / Independent",
-    exp_02_role: "Web & Blockchain Developer",
+    exp_02_role: "Web App & Smart Contract Developer",
     exp_02_desc:
-      "Handled web service development and blockchain-related projects, including Solidity-based smart contract work and support for NFT initiatives.",
+      "Handled web app development and smart contract development, with a focus on Solidity-based implementation.",
     contact_title: "Contact",
     contact_copy:
-      "Feel free to reach out about AI adoption, web service development, blockchain implementation, or adjacent collaboration opportunities.",
+      "Feel free to reach out about web app development, AI app development, or smart contract development.",
     contact_links: "Contact links",
     email_link_label: "Send email",
     footer_copyright: "© 2026 Pakpa. All rights reserved.",
     footer_status: "Available for projects",
     typewriter_phrases: [
-      "AI Integration Engineer",
-      "Blockchain Developer",
-      "Web Service Developer",
-      "Automation Architect",
+      "Web App Developer",
+      "AI App Developer",
+      "Smart Contract Developer",
+      "Full-Stack Builder",
     ],
   },
 };
@@ -167,12 +167,12 @@ const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const typewriter = document.querySelector("[data-typewriter]");
-const canvas = document.querySelector("[data-particles]");
-const cursorDot = document.querySelector("[data-cursor-dot]");
-const cursorRing = document.querySelector("[data-cursor-ring]");
+const heroCanvas = document.querySelector("[data-particles]");
 const descriptionMeta = document.querySelector('meta[name="description"]');
 const ogDescriptionMeta = document.querySelector('meta[property="og:description"]');
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reduceGeneralMotion = prefersReducedMotion;
+const reduceHeroMotion = false;
 
 let currentLanguage = getInitialLanguage();
 let typewriterTimer = null;
@@ -243,7 +243,7 @@ function startTypewriter(phrases) {
     typewriterTimer = null;
   }
 
-  if (reducedMotion) {
+  if (reduceHeroMotion) {
     typewriter.textContent = phrases[0];
     return;
   }
@@ -309,34 +309,9 @@ window.addEventListener("scroll", updateHeaderState, { passive: true });
 updateHeaderState();
 applyTranslations(currentLanguage);
 
-if (cursorDot && cursorRing && !reducedMotion && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-  let mouseX = window.innerWidth / 2;
-  let mouseY = window.innerHeight / 2;
-  let ringX = mouseX;
-  let ringY = mouseY;
-
-  document.addEventListener("mousemove", (event) => {
-    mouseX = event.clientX;
-    mouseY = event.clientY;
-    cursorDot.style.left = `${mouseX}px`;
-    cursorDot.style.top = `${mouseY}px`;
-  });
-
-  const animateRing = () => {
-    ringX += (mouseX - ringX) * 0.14;
-    ringY += (mouseY - ringY) * 0.14;
-    cursorRing.style.left = `${ringX}px`;
-    cursorRing.style.top = `${ringY}px`;
-    window.requestAnimationFrame(animateRing);
-  };
-
-  animateRing();
-
-  document.querySelectorAll("a, button").forEach((element) => {
-    element.addEventListener("mouseenter", () => cursorRing.classList.add("is-hovering"));
-    element.addEventListener("mouseleave", () => cursorRing.classList.remove("is-hovering"));
-  });
-}
+window.requestAnimationFrame(() => {
+  document.body.classList.add("hero-animate");
+});
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -373,76 +348,105 @@ if (nav) {
   document.querySelectorAll("main section[id]").forEach((section) => sectionObserver.observe(section));
 }
 
-if (canvas && !reducedMotion) {
-  const context = canvas.getContext("2d");
+if (heroCanvas && !reduceHeroMotion) {
+  const context = heroCanvas.getContext("2d");
   let width = 0;
   let height = 0;
+  let rafId = 0;
   let particles = [];
-  let animationId = 0;
+  let pointer = {
+    x: 0,
+    y: 0,
+    active: false,
+  };
 
-  function resizeCanvas() {
-    const ratio = Math.min(window.devicePixelRatio || 1, 2);
-    width = canvas.offsetWidth;
-    height = canvas.offsetHeight;
-    canvas.width = Math.floor(width * ratio);
-    canvas.height = Math.floor(height * ratio);
+  function resizeHeroCanvas() {
+    const ratio = Math.min(window.devicePixelRatio || 1, 1.6);
+    width = heroCanvas.offsetWidth;
+    height = heroCanvas.offsetHeight;
+    heroCanvas.width = Math.floor(width * ratio);
+    heroCanvas.height = Math.floor(height * ratio);
     context.setTransform(ratio, 0, 0, ratio, 0, 0);
   }
 
   function createParticles() {
-    const count = window.innerWidth < 760 ? 42 : 86;
+    const count = width < 768 ? 28 : 48;
     particles = Array.from({ length: count }, () => ({
       x: Math.random() * width,
       y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.34,
-      vy: (Math.random() - 0.5) * 0.34,
-      r: Math.random() * 1.4 + 0.5,
+      vx: (Math.random() - 0.5) * 0.18,
+      vy: (Math.random() - 0.5) * 0.18,
+      radius: Math.random() * 1.8 + 0.6,
+      alpha: Math.random() * 0.4 + 0.25,
     }));
   }
 
-  function draw() {
+  function drawParticles() {
     context.clearRect(0, 0, width, height);
 
-    particles.forEach((particle) => {
+    for (let i = 0; i < particles.length; i += 1) {
+      const particle = particles[i];
       particle.x += particle.vx;
       particle.y += particle.vy;
 
-      if (particle.x < 0 || particle.x > width) particle.vx *= -1;
-      if (particle.y < 0 || particle.y > height) particle.vy *= -1;
+      if (particle.x < -12) particle.x = width + 12;
+      if (particle.x > width + 12) particle.x = -12;
+      if (particle.y < -12) particle.y = height + 12;
+      if (particle.y > height + 12) particle.y = -12;
+
+      if (pointer.active) {
+        const dx = pointer.x - particle.x;
+        const dy = pointer.y - particle.y;
+        const distance = Math.hypot(dx, dy);
+        if (distance < 120 && distance > 0) {
+          particle.x -= (dx / distance) * 0.18;
+          particle.y -= (dy / distance) * 0.18;
+        }
+      }
 
       context.beginPath();
-      context.arc(particle.x, particle.y, particle.r, 0, Math.PI * 2);
-      context.fillStyle = "rgba(0, 245, 255, 0.55)";
+      context.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+      context.fillStyle = `rgba(0, 245, 255, ${particle.alpha})`;
       context.fill();
-    });
+    }
 
     for (let i = 0; i < particles.length; i += 1) {
       for (let j = i + 1; j < particles.length; j += 1) {
         const dx = particles[i].x - particles[j].x;
         const dy = particles[i].y - particles[j].y;
         const distance = Math.hypot(dx, dy);
+        if (distance > 96) continue;
 
-        if (distance < 128) {
-          context.beginPath();
-          context.moveTo(particles[i].x, particles[i].y);
-          context.lineTo(particles[j].x, particles[j].y);
-          context.strokeStyle = `rgba(0, 245, 255, ${(1 - distance / 128) * 0.16})`;
-          context.lineWidth = 0.7;
-          context.stroke();
-        }
+        context.beginPath();
+        context.moveTo(particles[i].x, particles[i].y);
+        context.lineTo(particles[j].x, particles[j].y);
+        context.strokeStyle = `rgba(123, 47, 255, ${(1 - distance / 96) * 0.16})`;
+        context.lineWidth = 0.7;
+        context.stroke();
       }
     }
 
-    animationId = window.requestAnimationFrame(draw);
+    rafId = window.requestAnimationFrame(drawParticles);
   }
 
-  function resetParticles() {
-    window.cancelAnimationFrame(animationId);
-    resizeCanvas();
+  function resetHeroAnimation() {
+    window.cancelAnimationFrame(rafId);
+    resizeHeroCanvas();
     createParticles();
-    draw();
+    drawParticles();
   }
 
-  window.addEventListener("resize", resetParticles, { passive: true });
-  resetParticles();
+  heroCanvas.addEventListener("pointermove", (event) => {
+    const rect = heroCanvas.getBoundingClientRect();
+    pointer.x = event.clientX - rect.left;
+    pointer.y = event.clientY - rect.top;
+    pointer.active = true;
+  });
+
+  heroCanvas.addEventListener("pointerleave", () => {
+    pointer.active = false;
+  });
+
+  window.addEventListener("resize", resetHeroAnimation, { passive: true });
+  resetHeroAnimation();
 }

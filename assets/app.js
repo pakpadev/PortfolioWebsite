@@ -168,6 +168,8 @@ const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const typewriter = document.querySelector("[data-typewriter]");
 const canvas = document.querySelector("[data-particles]");
+const cursorDot = document.querySelector("[data-cursor-dot]");
+const cursorRing = document.querySelector("[data-cursor-ring]");
 const descriptionMeta = document.querySelector('meta[name="description"]');
 const ogDescriptionMeta = document.querySelector('meta[property="og:description"]');
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -306,6 +308,35 @@ document.querySelectorAll("[data-lang-button]").forEach((button) => {
 window.addEventListener("scroll", updateHeaderState, { passive: true });
 updateHeaderState();
 applyTranslations(currentLanguage);
+
+if (cursorDot && cursorRing && !reducedMotion && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let ringX = mouseX;
+  let ringY = mouseY;
+
+  document.addEventListener("mousemove", (event) => {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+    cursorDot.style.left = `${mouseX}px`;
+    cursorDot.style.top = `${mouseY}px`;
+  });
+
+  const animateRing = () => {
+    ringX += (mouseX - ringX) * 0.14;
+    ringY += (mouseY - ringY) * 0.14;
+    cursorRing.style.left = `${ringX}px`;
+    cursorRing.style.top = `${ringY}px`;
+    window.requestAnimationFrame(animateRing);
+  };
+
+  animateRing();
+
+  document.querySelectorAll("a, button").forEach((element) => {
+    element.addEventListener("mouseenter", () => cursorRing.classList.add("is-hovering"));
+    element.addEventListener("mouseleave", () => cursorRing.classList.remove("is-hovering"));
+  });
+}
 
 const revealObserver = new IntersectionObserver(
   (entries) => {

@@ -39,6 +39,7 @@ body {
   font-family: var(--font-sans);
   letter-spacing: 0;
   overflow-x: hidden;
+  cursor: none;
 }
 
 body::after {
@@ -64,6 +65,39 @@ a {
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+}
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1200;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 18px rgb(0 245 255 / 55%);
+  mix-blend-mode: screen;
+}
+
+.cursor-ring {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgb(0 245 255 / 36%);
+  border-radius: 999px;
+  transition: width 180ms ease, height 180ms ease, border-color 180ms ease, opacity 180ms ease;
+}
+
+.cursor-ring.is-hovering {
+  width: 54px;
+  height: 54px;
+  border-color: rgb(123 47 255 / 52%);
 }
 
 :focus-visible {
@@ -568,6 +602,7 @@ a {
   inset: 10%;
   border: 1px solid rgb(123 47 255 / 45%);
   transform: rotate(45deg);
+  animation: rotateFrame 4.8s linear infinite;
 }
 
 .identity-core::after {
@@ -826,6 +861,24 @@ html[lang="en"] .hero-copy {
   box-shadow: var(--shadow-cyan);
 }
 
+.social-link[href*="github"]:hover {
+  color: var(--text-primary);
+  border-color: rgb(226 232 240 / 42%);
+  box-shadow: 0 0 18px rgb(226 232 240 / 16%);
+}
+
+.social-link[href*="linkedin"]:hover {
+  color: #cbb8ff;
+  border-color: rgb(123 47 255 / 46%);
+  box-shadow: var(--shadow-purple);
+}
+
+.social-link[href^="mailto:"]:hover {
+  color: var(--accent-green);
+  border-color: rgb(0 255 159 / 42%);
+  box-shadow: 0 0 18px rgb(0 255 159 / 24%);
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -944,6 +997,15 @@ html[lang="en"] .hero-copy {
   50% {
     transform: translateY(-16px) rotate(180deg);
     opacity: .7;
+  }
+}
+
+@keyframes rotateFrame {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(405deg);
   }
 }
 
@@ -1076,6 +1138,22 @@ html[lang="en"] .hero-copy {
   }
 
   .particle-canvas {
+    display: none;
+  }
+
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+
+  .cursor-dot,
+  .cursor-ring {
     display: none;
   }
 }

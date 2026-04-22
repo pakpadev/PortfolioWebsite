@@ -1084,21 +1084,31 @@ html[lang="en"] .hero-copy {
 @media (max-width: 760px) {
   .site-header {
     height: 64px;
+    padding: 0 .9rem;
   }
 
   .nav-toggle {
     display: block;
   }
 
+  .brand-mark {
+    min-width: 4.5rem;
+    height: 1.85rem;
+    padding: 0 .45rem;
+    font-size: .68rem;
+  }
+
   .site-nav {
     position: fixed;
-    inset: 64px 0 auto;
+    inset: 72px .9rem auto;
     order: unset;
     margin-left: 0;
     display: grid;
     gap: 0;
-    padding: 1rem;
+    padding: .65rem .9rem;
     background: rgb(3 7 18 / 96%);
+    border: 1px solid var(--border);
+    border-radius: 8px;
     border-bottom: 1px solid var(--border);
     transform: translateY(-120%);
     opacity: 0;
@@ -1113,7 +1123,7 @@ html[lang="en"] .hero-copy {
   }
 
   .site-nav a {
-    padding: 1rem;
+    padding: .95rem .5rem;
     border-bottom: 1px solid rgb(30 58 74 / 55%);
   }
 
@@ -1121,19 +1131,41 @@ html[lang="en"] .hero-copy {
     border-bottom: 0;
   }
 
+  .section-band {
+    padding: 4.5rem 1rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 6.5rem;
+    padding-bottom: 5.25rem;
+  }
+
   .about-layout,
   .skills-grid,
-  .projects-grid,
-  .social-grid {
+  .projects-grid {
     grid-template-columns: 1fr;
   }
 
+  .about-layout {
+    gap: 1.5rem;
+  }
+
   .identity-panel {
-    width: min(320px, 100%);
+    width: 100%;
+    max-width: 24rem;
+    justify-self: center;
+  }
+
+  .identity-stats div {
+    grid-template-columns: 4.7rem minmax(0, 1fr);
+    gap: .6rem;
   }
 
   .hero-copy {
+    width: 100%;
     font-size: .92rem;
+    line-height: 1.8;
   }
 
   .glitch-title {
@@ -1151,8 +1183,12 @@ html[lang="en"] .hero-copy {
   .hero-actions {
     display: grid;
     grid-template-columns: 1fr;
-    width: min(240px, 100%);
+    width: min(18rem, 100%);
     margin-inline: auto;
+  }
+
+  .scroll-cue {
+    bottom: 1.2rem;
   }
 
   .header-tools {
@@ -1168,6 +1204,44 @@ html[lang="en"] .hero-copy {
   .lang-button {
     min-height: 34px;
     font-size: .68rem;
+  }
+
+  .badge-list,
+  .tag-row,
+  .chip-list {
+    gap: .45rem;
+  }
+
+  .neon-card,
+  .project-card {
+    padding: 1.1rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: .55rem;
+  }
+
+  .timeline {
+    width: 100%;
+    padding-left: 1.35rem;
+  }
+
+  .timeline-item {
+    padding: 0 0 2.2rem 1.3rem;
+  }
+
+  .timeline-item::before {
+    left: -1.62rem;
+  }
+
+  .social-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .75rem;
+  }
+
+  .social-link {
+    min-height: 84px;
   }
 
   .hero-ring {
@@ -1189,16 +1263,39 @@ html[lang="en"] .hero-copy {
 
   .site-footer {
     display: grid;
+    justify-items: center;
+    text-align: center;
   }
 }
 
 @media (max-width: 420px) {
+  .site-header {
+    padding: 0 .75rem;
+  }
+
+  .site-nav {
+    inset: 70px .75rem auto;
+  }
+
   .glitch-title {
     font-size: 3.15rem;
   }
 
   .section-title {
     font-size: 1.85rem;
+  }
+
+  .hero-copy {
+    font-size: .88rem;
+  }
+
+  .identity-stats div {
+    grid-template-columns: 1fr;
+    gap: .2rem;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr;
   }
 }
 

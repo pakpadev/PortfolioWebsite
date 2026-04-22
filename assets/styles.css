@@ -101,10 +101,26 @@ a {
   transition: background-color 180ms ease, border-color 180ms ease, backdrop-filter 180ms ease;
 }
 
+.brand {
+  order: 1;
+  color: var(--accent-cyan);
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-decoration: none;
+  text-shadow: var(--shadow-cyan);
+}
+
+.site-nav {
+  order: 2;
+  margin-left: auto;
+}
+
 .header-tools {
+  order: 3;
   display: flex;
   align-items: center;
   gap: .8rem;
+  margin-left: 1rem;
 }
 
 .lang-switch {
@@ -140,14 +156,6 @@ a {
   border-bottom-color: rgb(0 245 255 / 18%);
   background: rgb(3 7 18 / 82%);
   backdrop-filter: blur(18px);
-}
-
-.brand {
-  color: var(--accent-cyan);
-  font-family: var(--font-display);
-  font-weight: 900;
-  text-decoration: none;
-  text-shadow: var(--shadow-cyan);
 }
 
 .brand-mark {
@@ -1085,6 +1093,8 @@ html[lang="en"] .hero-copy {
   .site-nav {
     position: fixed;
     inset: 64px 0 auto;
+    order: unset;
+    margin-left: 0;
     display: grid;
     gap: 0;
     padding: 1rem;
@@ -1146,7 +1156,9 @@ html[lang="en"] .hero-copy {
   }
 
   .header-tools {
+    order: unset;
     gap: .55rem;
+    margin-left: 0;
   }
 
   .lang-switch {

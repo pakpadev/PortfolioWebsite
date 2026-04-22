@@ -3,7 +3,7 @@ const translations = {
     html_lang: "ja",
     page_title: "Pakpa | AI & Blockchain Developer",
     page_description:
-      "AI とブロックチェーン領域を軸に、web開発、プロンプトAIアプリ設計、スマートコントラクト、NFT、トークン発行に取り組む Pakpa のポートフォリオサイトです。",
+      "AI とブロックチェーン領域を軸に、web開発、AIアプリ開発、スマートコントラクト、NFT、トークン発行に取り組む Pakpa のポートフォリオサイトです。",
     skip_link: "本文へ移動",
     brand_home: "Pakpa ホーム",
     language_switcher: "言語切り替え",
@@ -17,7 +17,7 @@ const translations = {
     nav_contact: "Contact",
     hero_system: "// INITIALIZING PORTFOLIO NODE",
     hero_copy:
-      "web開発、プロンプトAIアプリ設計、スマートコントラクト、NFT、トークン発行まで、実装に落とし込む開発を行っています。",
+      "web開発、AIアプリ開発、スマートコントラクト、NFT、トークン発行まで、実装に落とし込む開発を行っています。",
     hero_cta_projects: "View Projects",
     hero_cta_contact: "Contact",
     primary_links: "主要リンク",
@@ -32,7 +32,7 @@ const translations = {
     stat_status: "Status",
     stat_status_value: "Open to build",
     about_p1:
-      "AI とブロックチェーン領域を軸に、web開発、プロンプトAIアプリ設計、スマートコントラクト開発に取り組んでいます。検証で終わらせず、実装して使える形にすることを大切にしています。",
+      "AI とブロックチェーン領域を軸に、web開発、AIアプリ開発、スマートコントラクト開発に取り組んでいます。検証で終わらせず、実装して使える形にすることを大切にしています。",
     about_p2:
       "要件整理から実装まで一貫して関わり、NFT やトークン発行を含むブロックチェーン実装と、AI を活用したアプリ設計の両方に対応しています。",
     keywords_label: "キーワード",
@@ -66,7 +66,7 @@ const translations = {
     exp_02_desc:
       "スマートコントラクト、NFT、トークン発行を含むブロックチェーン実装と、関連するwebアプリ開発を担当しました。",
     contact_title: "Contact",
-    contact_copy: "AI、ブロックチェーン、web開発、プロンプトAIアプリ設計、スマートコントラクト実装のご相談など、お気軽にご連絡ください。",
+    contact_copy: "AI、ブロックチェーン、web開発、AIアプリ開発、スマートコントラクト実装のご相談など、お気軽にご連絡ください。",
     contact_links: "連絡先リンク",
     email_link_label: "メールを送る",
     footer_copyright: "© 2026 Pakpa. All rights reserved.",
@@ -82,7 +82,7 @@ const translations = {
     html_lang: "en",
     page_title: "Pakpa | AI & Blockchain Developer",
     page_description:
-      "Portfolio site for Pakpa, focused on AI and blockchain with concrete work in web development, prompt-based AI app design, smart contracts, NFTs, and token issuance.",
+      "Portfolio site for Pakpa, focused on AI and blockchain with concrete work in web development, AI app development, smart contracts, NFTs, and token issuance.",
     skip_link: "Skip to content",
     brand_home: "Pakpa home",
     language_switcher: "Language switcher",
@@ -96,7 +96,7 @@ const translations = {
     nav_contact: "Contact",
     hero_system: "// INITIALIZING PORTFOLIO NODE",
     hero_copy:
-      "I work across web development, prompt-based AI app design, smart contracts, NFTs, and token issuance, with a focus on turning ideas into working implementations.",
+      "I work across web development, AI app development, smart contracts, NFTs, and token issuance, with a focus on turning ideas into working implementations.",
     hero_cta_projects: "View Projects",
     hero_cta_contact: "Contact",
     primary_links: "Primary links",
@@ -111,7 +111,7 @@ const translations = {
     stat_status: "Status",
     stat_status_value: "Open to build",
     about_p1:
-      "My work centers on AI and blockchain, with hands-on development in web applications, prompt-based AI app design, and smart contract implementation.",
+      "My work centers on AI and blockchain, with hands-on development in web applications, AI app development, and smart contract implementation.",
     about_p2:
       "I work from requirements through implementation, and I also handle blockchain-related builds such as NFTs and token issuance when the product calls for them.",
     keywords_label: "Keywords",
@@ -146,7 +146,7 @@ const translations = {
       "Handled blockchain implementation including smart contracts, NFTs, and token issuance, along with the related web application development.",
     contact_title: "Contact",
     contact_copy:
-      "Feel free to reach out about AI, blockchain, web development, prompt-based AI app design, or smart contract implementation.",
+      "Feel free to reach out about AI, blockchain, web development, AI app development, or smart contract implementation.",
     contact_links: "Contact links",
     email_link_label: "Send email",
     footer_copyright: "© 2026 Pakpa. All rights reserved.",

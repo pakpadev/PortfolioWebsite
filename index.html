@@ -28,23 +28,40 @@
     <script src="assets/app.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">本文へ移動</a>
+    <a class="skip-link" href="#main" data-i18n="skip_link">本文へ移動</a>
 
     <header class="site-header" data-header>
-      <a class="brand" href="#hero" aria-label="Pakpa ホーム">
+      <a class="brand" href="#hero" aria-label="Pakpa Home" data-i18n-attr="aria-label:brand_home">
         <span class="brand-mark">PKP</span>
       </a>
-      <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" data-nav-toggle>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="site-nav" aria-label="主要ナビゲーション" data-nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+
+      <div class="header-tools">
+        <div class="lang-switch" role="group" aria-label="Language switcher" data-i18n-attr="aria-label:language_switcher">
+          <button class="lang-button" type="button" data-lang-button="ja" aria-pressed="true">JA</button>
+          <button class="lang-button" type="button" data-lang-button="en" aria-pressed="false">EN</button>
+        </div>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+          data-nav-toggle
+          data-nav-label-open="nav_open"
+          data-nav-label-close="nav_close"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="site-nav" aria-label="主要ナビゲーション" data-nav data-i18n-attr="aria-label:primary_navigation">
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#skills" data-i18n="nav_skills">Skills</a>
+        <a href="#projects" data-i18n="nav_projects">Projects</a>
+        <a href="#experience" data-i18n="nav_experience">Experience</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
       </nav>
     </header>
 
@@ -53,22 +70,26 @@
         <canvas class="particle-canvas" data-particles aria-hidden="true"></canvas>
         <div class="perspective-grid" aria-hidden="true"></div>
         <div class="scan-beam" aria-hidden="true"></div>
+        <div class="hero-orbit hero-orbit-left" aria-hidden="true"></div>
+        <div class="hero-orbit hero-orbit-right" aria-hidden="true"></div>
+
         <div class="hero-content">
-          <p class="system-label">// INITIALIZING PORTFOLIO NODE</p>
-          <h1 class="glitch-title" id="hero-title" data-text="PAKPA">PAKPA</h1>
-          <p class="hero-role">
+          <p class="system-label hero-intro" data-i18n="hero_system">// INITIALIZING PORTFOLIO NODE</p>
+          <h1 class="glitch-title hero-intro" id="hero-title" data-text="PAKPA">PAKPA</h1>
+          <p class="hero-role hero-intro">
             <span data-typewriter>AI Integration Engineer</span><span class="typing-caret" aria-hidden="true"></span>
           </p>
-          <p class="hero-copy">
+          <p class="hero-copy hero-intro" data-i18n="hero_copy">
             AI実装、Webサービス開発、ブロックチェーン技術をつなぎ、実務に届くプロダクトへ落とし込むエンジニアです。
           </p>
-          <div class="hero-actions" aria-label="主要リンク">
-            <a class="button button-primary" href="#projects">View Projects</a>
-            <a class="button button-secondary" href="#contact">Contact</a>
+          <div class="hero-actions hero-intro" aria-label="主要リンク" data-i18n-attr="aria-label:primary_links">
+            <a class="button button-primary" href="#projects" data-i18n="hero_cta_projects">View Projects</a>
+            <a class="button button-secondary" href="#contact" data-i18n="hero_cta_contact">Contact</a>
           </div>
         </div>
-        <a class="scroll-cue" href="#about" aria-label="About セクションへ移動">
-          <span>Scroll</span>
+
+        <a class="scroll-cue" href="#about" aria-label="About section" data-i18n-attr="aria-label:scroll_to_about">
+          <span data-i18n="scroll_label">Scroll</span>
           <span class="scroll-line" aria-hidden="true"></span>
         </a>
       </section>
@@ -77,35 +98,37 @@
         <div class="section-shell about-layout">
           <div class="section-heading">
             <p class="section-kicker">// 01</p>
-            <h2 class="section-title" id="about-title">About</h2>
+            <h2 class="section-title" id="about-title" data-i18n="about_title">About</h2>
           </div>
-          <div class="identity-panel" aria-label="プロフィールシグナル">
+
+          <div class="identity-panel reveal-child" aria-label="Profile signal" data-i18n-attr="aria-label:profile_signal">
             <div class="identity-core">
               <span>PKP</span>
             </div>
             <dl class="identity-stats">
               <div>
-                <dt>Focus</dt>
-                <dd>AI / Web3 / Automation</dd>
+                <dt data-i18n="stat_focus">Focus</dt>
+                <dd data-i18n="stat_focus_value">AI / Web3 / Automation</dd>
               </div>
               <div>
-                <dt>Base</dt>
-                <dd>Japan</dd>
+                <dt data-i18n="stat_base">Base</dt>
+                <dd data-i18n="stat_base_value">Japan</dd>
               </div>
               <div>
-                <dt>Status</dt>
-                <dd>Open to build</dd>
+                <dt data-i18n="stat_status">Status</dt>
+                <dd data-i18n="stat_status_value">Open to build</dd>
               </div>
             </dl>
           </div>
-          <div class="about-copy">
-            <p>
-              生成AIを活用した業務改善、Webサービスのバックエンド開発、ブロックチェーン領域の実装を中心に活動しています。技術検証で終わらせず、運用・学習・継続改善まで見据えた設計を大切にしています。
+
+          <div class="about-copy reveal-child">
+            <p data-i18n="about_p1">
+              生成AIを活用した業務改善、Webサービスのバックエンド開発、ブロックチェーン領域の実装を中心に活動しています。技術検証で終わらせず、運用や学習、継続改善まで見据えた設計を大切にしています。
             </p>
-            <p>
+            <p data-i18n="about_p2">
               企業内エンジニアとしての開発経験に加え、個人事業として AI 導入支援、AI トレーニング、サービス設計の相談にも取り組んでいます。
             </p>
-            <div class="badge-list" aria-label="キーワード">
+            <div class="badge-list" aria-label="Keywords" data-i18n-attr="aria-label:keywords_label">
               <span>#AI Integration</span>
               <span>#Blockchain</span>
               <span>#Node.js</span>
@@ -121,10 +144,10 @@
         <div class="section-shell">
           <div class="section-heading">
             <p class="section-kicker">// 02</p>
-            <h2 class="section-title" id="skills-title">Skills</h2>
+            <h2 class="section-title" id="skills-title" data-i18n="skills_title">Skills</h2>
           </div>
-          <div class="skills-grid">
-            <article class="neon-card">
+          <div class="skills-grid stagger-grid">
+            <article class="neon-card reveal-child">
               <h3>AI / ML</h3>
               <ul class="chip-list">
                 <li>LLM</li>
@@ -135,7 +158,7 @@
                 <li>AI Workflow</li>
               </ul>
             </article>
-            <article class="neon-card">
+            <article class="neon-card reveal-child">
               <h3>Blockchain</h3>
               <ul class="chip-list">
                 <li>Solidity</li>
@@ -146,7 +169,7 @@
                 <li>Smart Contract</li>
               </ul>
             </article>
-            <article class="neon-card">
+            <article class="neon-card reveal-child">
               <h3>Backend</h3>
               <ul class="chip-list">
                 <li>Node.js</li>
@@ -157,7 +180,7 @@
                 <li>Auth</li>
               </ul>
             </article>
-            <article class="neon-card">
+            <article class="neon-card reveal-child">
               <h3>Cloud / Tools</h3>
               <ul class="chip-list">
                 <li>AWS EC2</li>
@@ -176,13 +199,13 @@
         <div class="section-shell">
           <div class="section-heading">
             <p class="section-kicker">// 03</p>
-            <h2 class="section-title" id="projects-title">Projects</h2>
+            <h2 class="section-title" id="projects-title" data-i18n="projects_title">Projects</h2>
           </div>
-          <div class="projects-grid">
-            <article class="project-card">
-              <p class="project-index">Project 01</p>
-              <h3>AI Consultation Platform</h3>
-              <p>
+          <div class="projects-grid stagger-grid">
+            <article class="project-card reveal-child">
+              <p class="project-index" data-i18n="project_01_index">Project 01</p>
+              <h3 data-i18n="project_01_title">AI Consultation Platform</h3>
+              <p data-i18n="project_01_desc">
                 企業向け AI 導入相談、学習コンテンツ管理、進捗可視化をまとめたプラットフォーム。AI 活用の検討から定着までを支援する設計です。
               </p>
               <div class="tag-row">
@@ -191,14 +214,14 @@
                 <span>AWS</span>
               </div>
               <div class="project-links">
-                <a href="#" aria-label="AI Consultation Platform の GitHub を開く">GitHub</a>
-                <a href="#" aria-label="AI Consultation Platform のデモを開く">Demo</a>
+                <a href="#" aria-label="AI Consultation Platform GitHub" data-i18n="project_link_github" data-i18n-attr="aria-label:project_01_github_label">GitHub</a>
+                <a href="#" aria-label="AI Consultation Platform Demo" data-i18n="project_link_demo" data-i18n-attr="aria-label:project_01_demo_label">Demo</a>
               </div>
             </article>
-            <article class="project-card">
-              <p class="project-index">Project 02</p>
-              <h3>AI-Powered Web Service</h3>
-              <p>
+            <article class="project-card reveal-child">
+              <p class="project-index" data-i18n="project_02_index">Project 02</p>
+              <h3 data-i18n="project_02_title">AI-Powered Web Service</h3>
+              <p data-i18n="project_02_desc">
                 OpenAI API と Claude API を組み込んだ Web アプリケーション。自然言語インターフェースによる業務フロー短縮を狙っています。
               </p>
               <div class="tag-row">
@@ -207,13 +230,13 @@
                 <span>Automation</span>
               </div>
               <div class="project-links">
-                <a href="#" aria-label="AI-Powered Web Service の GitHub を開く">GitHub</a>
+                <a href="#" aria-label="AI-Powered Web Service GitHub" data-i18n="project_link_github" data-i18n-attr="aria-label:project_02_github_label">GitHub</a>
               </div>
             </article>
-            <article class="project-card">
-              <p class="project-index">Project 03</p>
-              <h3>Content Automation System</h3>
-              <p>
+            <article class="project-card reveal-child">
+              <p class="project-index" data-i18n="project_03_index">Project 03</p>
+              <h3 data-i18n="project_03_title">Content Automation System</h3>
+              <p data-i18n="project_03_desc">
                 メモから記事草案、SNS 投稿案、配信管理までをつなぐコンテンツ制作支援システム。小さな入力を継続的な発信へ変換します。
               </p>
               <div class="tag-row">
@@ -222,7 +245,7 @@
                 <span>GitHub Actions</span>
               </div>
               <div class="project-links">
-                <a href="#" aria-label="Content Automation System の GitHub を開く">GitHub</a>
+                <a href="#" aria-label="Content Automation System GitHub" data-i18n="project_link_github" data-i18n-attr="aria-label:project_03_github_label">GitHub</a>
               </div>
             </article>
           </div>
@@ -233,14 +256,14 @@
         <div class="section-shell">
           <div class="section-heading">
             <p class="section-kicker">// 04</p>
-            <h2 class="section-title" id="experience-title">Experience</h2>
+            <h2 class="section-title" id="experience-title" data-i18n="experience_title">Experience</h2>
           </div>
           <div class="timeline">
-            <article class="timeline-item">
+            <article class="timeline-item reveal-child">
               <p class="timeline-period">2022.04 - Present</p>
-              <h3>Web Service Company</h3>
-              <p class="timeline-role">Software Engineer</p>
-              <p>
+              <h3 data-i18n="exp_01_company">Web Service Company</h3>
+              <p class="timeline-role" data-i18n="exp_01_role">Software Engineer</p>
+              <p data-i18n="exp_01_desc">
                 Web サービスのバックエンド開発、クラウドインフラ設計、AI ツールのサービス組み込み、社内 AI トレーニングの企画・推進を担当。
               </p>
               <div class="tag-row">
@@ -249,12 +272,12 @@
                 <span>AI Integration</span>
               </div>
             </article>
-            <article class="timeline-item">
+            <article class="timeline-item reveal-child">
               <p class="timeline-period">2020.01 - 2022.03</p>
-              <h3>Freelance / Independent</h3>
-              <p class="timeline-role">Web & Blockchain Developer</p>
-              <p>
-                Web サービス開発とブロックチェーン関連プロジェクトを担当。Solidity によるスマートコントラクト開発や NFT プロジェクト支援を経験。
+              <h3 data-i18n="exp_02_company">Freelance / Independent</h3>
+              <p class="timeline-role" data-i18n="exp_02_role">Web & Blockchain Developer</p>
+              <p data-i18n="exp_02_desc">
+                Web サービス開発とブロックチェーン関連プロジェクトを担当。Solidity によるスマートコントラクト開発や NFT プロジェクト支援を経験しました。
               </p>
               <div class="tag-row">
                 <span>Web Dev</span>
@@ -270,25 +293,25 @@
         <div class="section-shell contact-inner">
           <div class="section-heading centered">
             <p class="section-kicker">// 05</p>
-            <h2 class="section-title" id="contact-title">Contact</h2>
+            <h2 class="section-title" id="contact-title" data-i18n="contact_title">Contact</h2>
           </div>
-          <p>
+          <p class="reveal-child" data-i18n="contact_copy">
             AI 導入、Web サービス開発、ブロックチェーン実装の相談など、お気軽にご連絡ください。
           </p>
-          <div class="social-grid" aria-label="連絡先リンク">
-            <a class="social-link" href="#" aria-label="GitHub">
+          <div class="social-grid stagger-grid" aria-label="Contact links" data-i18n-attr="aria-label:contact_links">
+            <a class="social-link reveal-child" href="#" aria-label="GitHub">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.1.79-.25.79-.56v-2.02c-3.22.7-3.9-1.38-3.9-1.38-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.76.41-1.27.74-1.56-2.57-.29-5.27-1.28-5.27-5.72 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.17 1.19a10.9 10.9 0 0 1 5.78 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.85 1.2 3.11 0 4.45-2.71 5.43-5.29 5.71.42.36.8 1.07.8 2.16v3.05c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
               <span>GitHub</span>
             </a>
-            <a class="social-link" href="#" aria-label="X">
+            <a class="social-link reveal-child" href="#" aria-label="X">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23Zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64Z"/></svg>
               <span>X</span>
             </a>
-            <a class="social-link" href="#" aria-label="LinkedIn">
+            <a class="social-link reveal-child" href="#" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13Zm1.78 13.02H3.56V9h3.56v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.2 0 22.23 0Z"/></svg>
               <span>LinkedIn</span>
             </a>
-            <a class="social-link" href="mailto:your@email.com" aria-label="メールを送る">
+            <a class="social-link reveal-child" href="mailto:your@email.com" aria-label="Send email" data-i18n-attr="aria-label:email_link_label">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.75 5.25h16.5c.83 0 1.5.67 1.5 1.5v10.5c0 .83-.67 1.5-1.5 1.5H3.75c-.83 0-1.5-.67-1.5-1.5V6.75c0-.83.67-1.5 1.5-1.5Zm.62 1.5 7.63 5.08 7.63-5.08H4.37Zm15.88 1.4-7.84 5.23a.75.75 0 0 1-.82 0L3.75 8.15v9.1h16.5v-9.1Z"/></svg>
               <span>Email</span>
             </a>
@@ -298,8 +321,8 @@
     </main>
 
     <footer class="site-footer">
-      <p>&copy; 2026 Pakpa. All rights reserved.</p>
-      <p class="availability">Available for projects</p>
+      <p data-i18n="footer_copyright">&copy; 2026 Pakpa. All rights reserved.</p>
+      <p class="availability" data-i18n="footer_status">Available for projects</p>
     </footer>
   </body>
 </html>

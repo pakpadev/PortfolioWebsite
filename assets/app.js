@@ -1,7 +1,7 @@
 const translations = {
   ja: {
     html_lang: "ja",
-    page_title: "Pakpa | AI & Blockchain Developer",
+    page_title: "Pakpa | AI / Web3 Developer",
     page_description:
       "AI とブロックチェーン領域を軸に、web開発、AIアプリ開発、スマートコントラクト、NFT、トークン発行に取り組む Pakpa のポートフォリオサイトです。",
     skip_link: "本文へ移動",
@@ -71,16 +71,11 @@ const translations = {
     email_link_label: "メールを送る",
     footer_copyright: "© 2026 Pakpa. All rights reserved.",
     footer_status: "Available for projects",
-    typewriter_phrases: [
-      "AI Developer",
-      "Blockchain Developer",
-      "Web App Developer",
-      "Smart Contract Developer",
-    ],
+    typewriter_phrases: ["AI / Web3開発者"],
   },
   en: {
     html_lang: "en",
-    page_title: "Pakpa | AI & Blockchain Developer",
+    page_title: "Pakpa | AI / Web3 Developer",
     page_description:
       "Portfolio site for Pakpa, focused on AI and blockchain with concrete work in web development, AI app development, smart contracts, NFTs, and token issuance.",
     skip_link: "Skip to content",
@@ -151,12 +146,7 @@ const translations = {
     email_link_label: "Send email",
     footer_copyright: "© 2026 Pakpa. All rights reserved.",
     footer_status: "Available for projects",
-    typewriter_phrases: [
-      "AI Developer",
-      "Blockchain Developer",
-      "Web App Developer",
-      "Smart Contract Developer",
-    ],
+    typewriter_phrases: ["AI / Web3 Developer"],
   },
 };
 
@@ -170,6 +160,7 @@ const typewriter = document.querySelector("[data-typewriter]");
 const heroCanvas = document.querySelector("[data-particles]");
 const descriptionMeta = document.querySelector('meta[name="description"]');
 const ogDescriptionMeta = document.querySelector('meta[property="og:description"]');
+const ogTitleMeta = document.querySelector('meta[property="og:title"]');
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const reduceGeneralMotion = prefersReducedMotion;
 const reduceHeroMotion = false;
@@ -203,6 +194,7 @@ function applyTranslations(language) {
 
   root.lang = copy.html_lang;
   document.title = copy.page_title;
+  if (ogTitleMeta) ogTitleMeta.setAttribute("content", copy.page_title);
   if (descriptionMeta) descriptionMeta.setAttribute("content", copy.page_description);
   if (ogDescriptionMeta) ogDescriptionMeta.setAttribute("content", copy.page_description);
 
@@ -244,6 +236,11 @@ function startTypewriter(phrases) {
   }
 
   if (reduceHeroMotion) {
+    typewriter.textContent = phrases[0];
+    return;
+  }
+
+  if (phrases.length === 1) {
     typewriter.textContent = phrases[0];
     return;
   }
